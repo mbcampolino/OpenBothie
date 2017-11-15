@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Point;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Bundle;
@@ -14,7 +15,11 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.util.TypedValue;
+import android.view.Display;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -100,6 +105,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnTake = (ImageView) findViewById(R.id.btn_take_photo);
         btnGalery = (CircleImageView) findViewById(R.id.btn_galery);
         photocrop = (LinearLayout) findViewById(R.id.photocrop);
+
         btnChange.setOnClickListener(this);
         btnTake.setOnClickListener(this);
         btnGalery.setOnClickListener(this);
