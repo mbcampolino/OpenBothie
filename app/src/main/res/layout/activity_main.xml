@@ -2,46 +2,44 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:camerakit="http://schemas.android.com/apk/res-auto"
     android:background="#000"
-    android:orientation="vertical"
-    android:fitsSystemWindows="true">
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:id="@+id/photocrop"
-        android:adjustViewBounds="true"
         android:weightSum="2">
 
         <com.wonderkiln.camerakit.CameraView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/cameratop"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:adjustViewBounds="true"
-            camerakit:ckCropOutput="true"
-            camerakit:ckFacing="front"
-            camerakit:ckJpegQuality="100"
-            camerakit:ckMethod="still"
-            camerakit:ckZoom="pinch"
-            android:scaleType="centerCrop"
+            app:ckCropOutput="true"
+            app:ckFacing="front"
+            app:ckJpegQuality="100"
+            app:ckMethod="still"
+            app:ckZoom="pinch"
+            app:ckVideoQuality="highest"
             />
 
         <com.wonderkiln.camerakit.CameraView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/cameraback"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:adjustViewBounds="true"
             android:background="#1a1a1a"
-            camerakit:ckCropOutput="true"
-            camerakit:ckFacing="back"
-            camerakit:ckJpegQuality="100"
-            camerakit:ckMethod="still"
-            camerakit:ckZoom="pinch"
-            android:scaleType="centerCrop" />
+            app:ckCropOutput="true"
+            app:ckFacing="back"
+            app:ckJpegQuality="100"
+            app:ckMethod="still"
+            app:ckZoom="pinch"
+            app:ckFocus="tapWithMarker"
+            app:ckVideoQuality="highest"/>
 
     </LinearLayout>
 
